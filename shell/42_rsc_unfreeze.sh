@@ -1,10 +1,10 @@
 ﻿#!/bin/sh
 
-echo 'サーバー先でcake_demo_rsc.tar.gzを解凍します。'
+echo 'サーバー先でsdrs_rsc.tar.gzを解凍します。'
 ssh -l amaraimusi amaraimusi.sakura.ne.jp "
-	cd www/cake_demo/app/webroot;
+	cd www/sdrs/app/webroot;
 	pwd;
-	tar vxzf cake_demo_rsc.tar.gz;
+	tar vxzf sdrs_rsc.tar.gz;
 	exit;
 	"
 

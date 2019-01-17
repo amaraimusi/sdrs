@@ -9,27 +9,27 @@ pwd
 pw="neko"
 
 # wp_から始まるテーブル名一覧を取得し、テキストファイルに出力する。
-mysql -uroot -p$pw cake_demo -N -e "show tables like 'wp_%'" > wp_table_names.txt
+mysql -uroot -p$pw sdrs -N -e "show tables like 'wp_%'" > wp_table_names.txt
 
 # テキストファイルを読み込む。その際、改行はスペースに変換する。 改行コードはWindowsなら\n\r、Linuxなら\nに書き換えるように。
 tbls_text=`cat wp_table_names.txt | tr  '\n\r' ' '`
 echo "$tbls_text"
 
 echo 'SQLをエクスポートします。'
-mysqldump -uroot -p$pw cake_demo $tbls_text --add-drop-table > wp_tbls.sql
+mysqldump -uroot -p$pw sdrs $tbls_text --add-drop-table > wp_tbls.sql
 echo 'エクスポートしました。'
 
 echo 'SQLファイルをサーバーに転送します。'
-scp wp_tbls.sql amaraimusi@amaraimusi.sakura.ne.jp:www/cake_demo/shell
+scp wp_tbls.sql amaraimusi@amaraimusi.sakura.ne.jp:www/sdrs/shell
 echo '転送しました。'
 
 echo 'serverフォルダ内のシェルを転送します。'
-scp -r server amaraimusi@amaraimusi.sakura.ne.jp:www/cake_demo/shell/
+scp -r server amaraimusi@amaraimusi.sakura.ne.jp:www/sdrs/shell/
 echo '転送しました。'
 
 echo 'サーバー側のシェルを実行します。'
 ssh -l amaraimusi amaraimusi.sakura.ne.jp "
-	sh www/cake_demo/shell/server/51_wp_import_tbls.sh;
+	sh www/sdrs/shell/server/51_wp_import_tbls.sh;
 	"
 
 echo "サーバー側のシェルをすべて実行しました。"

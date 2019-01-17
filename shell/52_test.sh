@@ -11,10 +11,10 @@ pw="neko"
 
 
 echo 'SQLをエクスポートします。'
-#mysqldump -uroot -p$pw cake_demo yagis --add-drop-table > yagis$xxx.sql
+#mysqldump -uroot -p$pw sdrs yagis --add-drop-table > yagis$xxx.sql
 
 #date1=`date +"%Y%m%d"`
-#mysql -uroot -p$pw cake_demo -N -e "show tables" > test$date1.txt
+#mysql -uroot -p$pw sdrs -N -e "show tables" > test$date1.txt
 
 #tbls_text=`cat test.txt`
 #echo "$tbls_text"
