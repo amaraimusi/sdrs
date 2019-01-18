@@ -16,8 +16,6 @@ $this->assign('script', $this->Html->script($jsList,array('charset'=>'utf-8')));
 
 
 
-
-
 <div class="cb_func_line">
 
 

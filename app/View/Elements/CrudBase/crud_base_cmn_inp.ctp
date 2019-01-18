@@ -1,4 +1,3 @@
-
 <div id="hiddens_data" style="display:none">
 <?php
 
