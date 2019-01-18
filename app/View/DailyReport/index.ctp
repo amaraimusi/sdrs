@@ -71,9 +71,12 @@ $this->assign('script', $this->Html->script($jsList,array('charset'=>'utf-8')));
 		<?php echo $this->Form->end()?>
 	</div>
 	
-	<div id="cb_func_btns" class="btn-group" >
+	<div id="cb_func_btns"  >
 		<button type="button" onclick="$('#detail_div').toggle(300);" class="btn btn-default">
 			<span class="glyphicon glyphicon-wrench"></span></button>
+			
+		<a href="site" class="btn btn-info btn-xs">現場マスタ編集</a>
+		<a href="work_category" class="btn btn-info btn-xs">作業カテゴリ編集</a>
 	</div>
 		
 </div><!-- cb_func_line -->
