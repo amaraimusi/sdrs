@@ -66,7 +66,23 @@
     echo $this->Form->submit('login', array('div' => false, 'class' => 'btn btn-primary'));
     echo $this->Form->end();
     ?>
+  
+	<h3>レビュー用公開アカウント</h3>
+	<table class="tbl2">
+		<thead>
+			<tr><th>ユーザー名</th><th>パスワード</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>owari</td><td>nobunaga</td></tr>
+			<tr><td>kamakura</td><td>yoritomo</td></tr>
+			<tr><td>kyouto</td><td>godaigo</td></tr>
+			<tr><td>hokkaido</td><td>shakushain</td></tr>
+			<tr><td>shuri</td><td>shouhasi</td></tr>
+			<tr><td>satuma</td><td>takamori</td></tr>
+		</tbody>
+	</table>
 </div><!-- well -->
+
 </div><!-- container -->
 
 
