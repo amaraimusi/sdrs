@@ -113,7 +113,7 @@ $this->assign('script', $this->Html->script($jsList,array('charset'=>'utf-8')));
 		<input type="button" value="ボタンサイズ変更" class="btn btn-default btn-xs" onclick="jQuery('#CbBtnSizeChanger').toggle(300);" />
 		<div id="CbBtnSizeChanger" style="display:none"></div>
 		
-		<button id="calendar_view_k_btn" type="button" class="btn btn-default btn-xs" onclick="calendarViewKShow()" >
+		<button style="display:none" id="calendar_view_k_btn" type="button" class="btn btn-default btn-xs" onclick="calendarViewKShow()" >
 			<span class="glyphicon glyphicon-time" >カレンダーモード</span></button>
 		
 		<button type="button" class="btn btn-default btn-xs" onclick="session_clear()" >セッションクリア</button>
